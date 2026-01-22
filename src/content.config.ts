@@ -1,9 +1,9 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const Notes = defineCollection({
+const notes = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './src/content/notes', pattern: '**/*.{md,mdx}' }),
 	// Type-check frontmatter using a schema
 	schema: ({ image }) =>
 		z.object({
@@ -16,9 +16,9 @@ const Notes = defineCollection({
 		}),
 });
 
-const Papers = defineCollection({
+const papers = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './src/content/papers', pattern: '**/*.{md,mdx}' }),
 	// Type-check frontmatter using a schema
 	schema: ({ image }) =>
 		z.object({
@@ -31,9 +31,9 @@ const Papers = defineCollection({
 		}),
 });
 
-const Views = defineCollection({
+const views = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './src/content/views', pattern: '**/*.{md,mdx}' }),
 	// Type-check frontmatter using a schema
 	schema: ({ image }) =>
 		z.object({
@@ -46,4 +46,4 @@ const Views = defineCollection({
 		}),
 });
 
-export const collections = { Notes, Papers, Views };
+export const collections = { notes, papers, views };
