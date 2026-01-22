@@ -6,3 +6,4 @@ heroImage: '../../assets/blog-placeholder-4.jpg'
 ---
 
 Hello notes.
+测试
